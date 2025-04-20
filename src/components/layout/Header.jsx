@@ -1,4 +1,4 @@
-import { AppBar, Box, Drawer, IconButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Divider, Drawer, IconButton, Toolbar, Typography } from '@mui/material'
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
@@ -16,11 +16,12 @@ const Header = () => {
   //Menu drawer//
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}} >
-      <Typography color={"goldenrod"} variant='h6' component="div" sx={{flexGrow: 1}}>
+      <Typography color={"goldenrod"} variant='h6' component="div" sx={{flexGrow: 1, my: 2}}>
             <FastfoodIcon/>
             My Resturant
           </Typography>
-            <ul className='NavigationMenu'>
+          <Divider/>
+            <ul className='MobileNavigationMenu'>
               <li><Link to={"/"}>Home</Link></li>
               <li><Link to={"/menu"}>Menu</Link></li>
               <li><Link to={"/about"}>About</Link></li>
@@ -62,6 +63,9 @@ const Header = () => {
         >
           {drawer}
         </Drawer>
+      </Box>
+      <Box sx={{p: 1}}>
+        <Toolbar/>
       </Box>
     </Box>
     </>
