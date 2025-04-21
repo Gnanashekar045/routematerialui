@@ -67,13 +67,14 @@
         background-color: #121619;
         color: white;
     }
-
+    
     .Home .headerContainer h1 {
         font-size: 40px;
         margin-top: 20px;
         height: 30px;
         margin: 30px 0px;
         color: white;
+        
     }
 
     .Home .headerContainer p {
