@@ -1,12 +1,19 @@
 import React from "react";
 import Layout from "../layout/Layout";
-import { Typography } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 const About = () => {
   return (
     <Layout>
-      <Box>
-        <Typography>Wellcome to my restuarent</Typography>
+      <Box sx={{my: 15, textAlign: 'center', p: 2, "& h4": {fontWeight: 'bold', my: 2, fontSize: '2rem'}, '& p': {textAlign: 'justify'},
+      "@media (max-width:600px)": {
+        mt: 0,
+        "& h4": {
+            fontSize: '1rem'
+        }
+      }
+     }}>
+        <Typography variant="h4">Wellcome to my restuarent</Typography>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quod
           quos commodi voluptas, sunt soluta quo. Dolor, consequuntur? Inventore
@@ -20,7 +27,7 @@ const About = () => {
           laboriosam expedita laborum tenetur dignissimos enim porro impedit,
           magni assumenda? Assumenda veniam ab, officiis obcaecati cumque
           asperiores magnam veritatis ratione exercitationem.
-        </p>
+        </p><br /><br />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro magnam
           cum earum ipsam amet aliquid, quis voluptates error. Impedit ratione
